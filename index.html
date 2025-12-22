@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mini TMDB - Top & Popular + Sök</title>
+
+    <link rel="stylesheet" href= "styles.css"/>
+  <!-- anime.js via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" defer></script>
+
+  <!-- App modules -->
+  <script type="module" src="app.js" defer></script>
+
+  
+</head>
+<body>
+  <header class="header">
+    <h1>Miniprojekt - The Movie Database</h1>
+    <p class="subtitle">Se Top 10, Popular eller sök efter filmer och personer</p>
+  </header>
+
+  <main class="container">
+    <!-- Controls -->
+    <section class="controls">
+      <div class="buttons">
+        <button id="btnTopRated" class="btn">Top 10 - Top Rated</button>
+        <button id="btnPopular" class="btn">Top 10 - Popular</button>
+      </div>
+
+      <form id="movieSearchForm" class="searchForm">
+        <input id="movieQuery" type="search" placeholder="Sök film..." />
+        <button class="btn" id="movieSearchBtn" type="submit">Sök Film</button>
+      </form>
+
+      <form id="personSearchForm" class="searchForm">
+        <input id="personQuery" type="search" placeholder="Sök person..." />
+        <button class="btn" id="personSearchBtn" type="submit">Sök Person</button>
+      </form>
+    </section>
+
+    <!-- Error / info -->
+    <section id="message" class="message" aria-live="polite"></section>
+
+    <!-- Results -->
+    <section id="results" class="results" aria-live="polite"></section>
+  </main>
+
+  <footer class="footer">
+    <small>Data från The Movie Database (TMDB). Detta är en utbildningsversion.</small>
+  </footer>
+</body>
+</html>
+
+
