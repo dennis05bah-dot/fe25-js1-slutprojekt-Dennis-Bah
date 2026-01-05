@@ -50,6 +50,15 @@ async function visaTopRated() {
             results.appendChild(skapaFilmKort(film));
         });
 
+        anime({
+            targets: '.kort',
+            opacity: [0, 1],
+            translateY: [20, 0],
+            delay: anime.stagger(100),
+            duration: 600,
+            easing: 'easeOutQuad'
+        });
+
         vissMeddelande(message, '');
     } catch (error) {
         vissMeddelande(message, 'Något gick fel. Försök igen senare.', true);
@@ -68,6 +77,15 @@ async function visaPopular() {
         rensaResultat(results);
         filmer.forEach(film => {
             results.appendChild(skapaFilmKort(film));
+        });
+
+        anime({
+            targets: '.kort',
+            opacity: [0, 1],
+            translateY: [20, 0],
+            delay: anime.stagger(100),
+            duration: 600,
+            easing: 'easeOutQuad'
         });
 
         vissMeddelande(message, '');
@@ -103,6 +121,15 @@ async function sökFilm(event) {
             results.appendChild(skapaFilmKort(film));
         });
 
+         anime({
+    targets: '.kort',
+    opacity: [0, 1],
+    translateY: [20, 0],
+    delay: anime.stagger(100),
+    duration: 600,
+    easing: 'easeOutQuad'
+});
+
         vissMeddelande(message, '');
     } catch (error) {
         vissMeddelande(message, 'Något gick fel vid sökningen.', true);
@@ -135,6 +162,15 @@ async function sökPersoner(event) {
         personer.forEach(person => {
             results.appendChild(skapaPersonKort(person));
         });
+
+        anime({
+    targets: '.kort-person',
+    opacity: [0, 1],
+    translateY: [20, 0],
+    delay: anime.stagger(100),
+    duration: 600,
+    easing: 'easeOutQuad'
+});
 
         vissMeddelande(message, '');
     } catch (error) {
